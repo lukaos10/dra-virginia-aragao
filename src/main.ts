@@ -64,3 +64,62 @@ document.querySelectorAll<HTMLAnchorElement>("[data-whatsapp]").forEach((link) =
     link.href = WHATSAPP_URL;
   }
 });
+
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+document.querySelectorAll<HTMLElement>("[data-reveal-group]").forEach((group) => {
+  const from = group.dataset.revealGroup;
+  const children = [...group.children].filter(
+    (child): child is HTMLElement =>
+      child instanceof HTMLElement && !child.hasAttribute("data-reveal-group"),
+  );
+
+  children.forEach((child, index) => {
+    child.classList.add("reveal");
+    if (from === "fade") {
+      child.classList.add("reveal-fade");
+    }
+    if (from === "left" || (group.classList.contains("grid") && index === 0 && children.length === 2)) {
+      child.classList.add("reveal-left");
+    }
+    if (from === "right" || (group.classList.contains("grid") && index === 1 && children.length === 2)) {
+      child.classList.add("reveal-right");
+    }
+    child.style.setProperty("--reveal-delay", `${index * 140}ms`);
+  });
+});
+
+document.querySelectorAll<HTMLElement>("[data-reveal]").forEach((element) => {
+  element.classList.add("reveal");
+  if (element.dataset.reveal === "left") {
+    element.classList.add("reveal-left");
+  }
+  if (element.dataset.reveal === "right") {
+    element.classList.add("reveal-right");
+  }
+});
+
+const revealElements = document.querySelectorAll(".reveal");
+
+if (prefersReducedMotion) {
+  revealElements.forEach((element) => element.classList.add("is-visible"));
+} else {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -10% 0px",
+    },
+  );
+
+  revealElements.forEach((element) => revealObserver.observe(element));
+}
