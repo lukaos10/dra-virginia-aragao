@@ -55,20 +55,12 @@ body {
   font-family: var(--font-display);
 }
 
-.hero-photo {
-  background-image:
-    linear-gradient(105deg, oklch(28% 0.038 48 / 0.78) 0%, oklch(28% 0.038 48 / 0.35) 55%, oklch(28% 0.038 48 / 0.12) 100%),
-    url("/fotos/doutora.jpg");
-  background-size: cover;
-  background-position: center 18%;
-}
-
 .banner-photo {
   background-image:
-    linear-gradient(0deg, oklch(28% 0.038 48 / 0.55), oklch(28% 0.038 48 / 0.35)),
-    url("/fotos/cuidados.jpg");
+    linear-gradient(0deg, oklch(28% 0.038 48 / 0.68), oklch(28% 0.038 48 / 0.48)),
+    url("/fotos/reel.jpg");
   background-size: cover;
-  background-position: center 30%;
+  background-position: center;
 }
 
 html.reveal-ready [data-reveal-group] > *:not([data-reveal-group]),
