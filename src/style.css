@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: false;
+}
+@plugin "daisyui/theme" {
+  name: "virginia";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: oklch(98.4% 0.008 75);
+  --color-base-200: oklch(95.6% 0.014 72);
+  --color-base-300: oklch(90.8% 0.024 68);
+  --color-base-content: oklch(28% 0.038 48);
+  --color-primary: oklch(51% 0.115 32);
+  --color-primary-content: oklch(98.5% 0.008 75);
+  --color-secondary: oklch(79% 0.055 78);
+  --color-secondary-content: oklch(28% 0.038 48);
+  --color-accent: oklch(62% 0.07 155);
+  --color-accent-content: oklch(98% 0.01 155);
+  --color-neutral: oklch(27% 0.03 48);
+  --color-neutral-content: oklch(98% 0.008 75);
+  --color-info: oklch(70% 0.08 220);
+  --color-info-content: oklch(22% 0.04 220);
+  --color-success: oklch(64% 0.13 150);
+  --color-success-content: oklch(98% 0.01 150);
+  --color-warning: oklch(80% 0.12 80);
+  --color-warning-content: oklch(30% 0.05 80);
+  --color-error: oklch(62% 0.18 25);
+  --color-error-content: oklch(98% 0.01 25);
+  --radius-selector: 1rem;
+  --radius-field: 0.75rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.hero-photo {
+  background-image:
+    linear-gradient(105deg, oklch(28% 0.038 48 / 0.78) 0%, oklch(28% 0.038 48 / 0.35) 55%, oklch(28% 0.038 48 / 0.12) 100%),
+    url("https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=2000&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-photo {
+  background-image:
+    linear-gradient(0deg, oklch(28% 0.038 48 / 0.55), oklch(28% 0.038 48 / 0.35)),
+    url("https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1800&q=80");
+  background-size: cover;
+  background-position: center 35%;
+}
