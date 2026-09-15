@@ -79,24 +79,12 @@ document.querySelectorAll<HTMLElement>("[data-reveal-group]").forEach((group) =>
     if (from === "fade") {
       child.classList.add("reveal-fade");
     }
-    if (from === "left" || (group.classList.contains("grid") && index === 0 && children.length === 2)) {
-      child.classList.add("reveal-left");
-    }
-    if (from === "right" || (group.classList.contains("grid") && index === 1 && children.length === 2)) {
-      child.classList.add("reveal-right");
-    }
     child.style.setProperty("--reveal-delay", `${index * 140}ms`);
   });
 });
 
 document.querySelectorAll<HTMLElement>("[data-reveal]").forEach((element) => {
   element.classList.add("reveal");
-  if (element.dataset.reveal === "left") {
-    element.classList.add("reveal-left");
-  }
-  if (element.dataset.reveal === "right") {
-    element.classList.add("reveal-right");
-  }
 });
 
 const revealElements = document.querySelectorAll(".reveal");
@@ -117,7 +105,7 @@ if (prefersReducedMotion) {
     },
     {
       threshold: 0.12,
-      rootMargin: "0px 0px -10% 0px",
+      rootMargin: "0px 0px -5% 0px",
     },
   );
 

@@ -46,7 +46,7 @@
   <body>
     <div class="drawer">
       <input id="nav-drawer" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content flex flex-col">
+      <div class="drawer-content flex flex-col overflow-x-hidden">
         <div class="bg-neutral text-neutral-content">
           <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-4 py-2 text-sm sm:flex-row">
             <a class="link link-hover" href="tel:+558532276992">(85) 3227-6992</a>
@@ -69,9 +69,9 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </label>
-            <a href="#inicio" class="px-2">
-              <p class="font-display text-xl leading-none font-semibold">Dra. Virgínia Aragão</p>
-              <p class="text-xs tracking-wide uppercase opacity-70">Implantes · Ortodontia · Estética</p>
+            <a href="#inicio" class="min-w-0 px-1 sm:px-2">
+              <p class="font-display text-base leading-tight font-semibold sm:text-xl">Dra. Virgínia Aragão</p>
+              <p class="mt-0.5 hidden text-xs tracking-wide uppercase opacity-70 sm:block">Implantes · Ortodontia · Estética</p>
             </a>
           </div>
           <div class="navbar-center hidden lg:flex">
@@ -84,14 +84,14 @@
             </ul>
           </div>
           <div class="navbar-end">
-            <a class="btn" data-whatsapp href="https://wa.me/5585988207837?text=Ol%C3%A1%2C%20Dra.%20Virg%C3%ADnia%21%20Gostaria%20de%20agendar%20uma%20consulta.">
+            <a class="btn btn-sm sm:btn-md" data-whatsapp href="https://wa.me/5585988207837?text=Ol%C3%A1%2C%20Dra.%20Virg%C3%ADnia%21%20Gostaria%20de%20agendar%20uma%20consulta.">
               Agendar consulta
             </a>
           </div>
         </div>
 
         <section id="inicio" class="hero bg-base-200 min-h-[88vh]">
-          <div class="hero-content max-w-6xl flex-col-reverse gap-10 py-16 lg:flex-row lg:gap-16" data-reveal-group>
+          <div class="hero-content max-w-6xl flex-col-reverse items-center gap-10 py-16 text-center lg:flex-row lg:items-center lg:gap-16 lg:text-left" data-reveal-group>
             <div class="max-w-xl">
               <span class="badge badge-lg">Fortaleza · Vila União</span>
               <h1 class="font-display mt-4 text-5xl leading-tight font-semibold lg:text-6xl">
@@ -101,7 +101,7 @@
                 Implantes, ortodontia, alinhadores e odontologia estética com atendimento humanizado. Cuidado de quem
                 acompanha famílias em Fortaleza há mais de 20 anos.
               </p>
-              <div class="mt-8 flex flex-wrap gap-3">
+              <div class="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
                 <a
                   class="btn btn-primary btn-lg"
                   href="https://wa.me/5585988207837?text=Ol%C3%A1%2C%20Dra.%20Virg%C3%ADnia%21%20Gostaria%20de%20agendar%20uma%20consulta."
@@ -111,7 +111,7 @@
                 <a class="btn btn-lg" href="#tratamentos">Ver tratamentos</a>
               </div>
             </div>
-            <figure class="w-full max-w-md overflow-hidden rounded-box shadow-sm lg:max-w-lg">
+            <figure class="mx-auto w-full max-w-md overflow-hidden rounded-box shadow-sm lg:max-w-lg">
               <img
                 class="aspect-[4/5] w-full object-cover object-[center_8%]"
                 src="/fotos/doutora.jpg"
@@ -139,7 +139,7 @@
 
         <section id="tratamentos" class="bg-base-200 py-20">
           <div class="mx-auto max-w-6xl px-4" data-reveal-group>
-            <div class="mb-8 flex items-end justify-between gap-4" data-reveal-group>
+            <div class="mb-8 flex flex-col items-center gap-4 text-center sm:flex-row sm:items-end sm:justify-between sm:text-left" data-reveal-group>
               <div>
                 <p class="text-sm tracking-[0.2em] uppercase opacity-70">Especialidades</p>
                 <h2 class="font-display text-4xl font-semibold">Para você que busca</h2>
@@ -150,7 +150,7 @@
               </div>
             </div>
 
-            <div id="servicos-carousel" class="carousel carousel-start w-full gap-4" data-reveal-group="fade">
+            <div id="servicos-carousel" class="carousel carousel-center w-full gap-4" data-reveal-group="fade">
               <article class="carousel-item">
                 <div class="card bg-base-100 w-72 shadow-sm">
                   <figure class="h-44 overflow-hidden">
@@ -163,7 +163,7 @@
                   <div class="card-body">
                     <h3 class="card-title">Implantes</h3>
                     <p>Reposição de dentes perdidos com estabilidade, função e aparência natural.</p>
-                    <div class="card-actions">
+                    <div class="card-actions justify-center">
                       <a class="btn btn-sm" href="https://wa.me/5585988207837?text=Ol%C3%A1!%20Quero%20saber%20sobre%20implantes.">Agendar consulta</a>
                     </div>
                   </div>
@@ -182,7 +182,7 @@
                   <div class="card-body">
                     <h3 class="card-title">Ortodontia</h3>
                     <p>Alinhamento dos dentes para mastigação correta, saúde gengival e harmonia do sorriso.</p>
-                    <div class="card-actions">
+                    <div class="card-actions justify-center">
                       <a class="btn btn-sm" href="https://wa.me/5585988207837?text=Ol%C3%A1!%20Quero%20saber%20sobre%20ortodontia.">Agendar consulta</a>
                     </div>
                   </div>
@@ -201,7 +201,7 @@
                   <div class="card-body">
                     <h3 class="card-title">Alinhadores</h3>
                     <p>Corrigir o posicionamento dos dentes com placas transparentes e discretas no dia a dia.</p>
-                    <div class="card-actions">
+                    <div class="card-actions justify-center">
                       <a class="btn btn-sm" href="https://wa.me/5585988207837?text=Ol%C3%A1!%20Quero%20saber%20sobre%20alinhadores.">Agendar consulta</a>
                     </div>
                   </div>
@@ -220,7 +220,7 @@
                   <div class="card-body">
                     <h3 class="card-title">Odontologia estética</h3>
                     <p>Clareamento, facetas e protocolos para um sorriso mais harmônico, sem perder a naturalidade.</p>
-                    <div class="card-actions">
+                    <div class="card-actions justify-center">
                       <a class="btn btn-sm" href="https://wa.me/5585988207837?text=Ol%C3%A1!%20Quero%20saber%20sobre%20est%C3%A9tica%20odontol%C3%B3gica.">Agendar consulta</a>
                     </div>
                   </div>
@@ -239,7 +239,7 @@
                   <div class="card-body">
                     <h3 class="card-title">Reabilitação oral</h3>
                     <p>Reconstruir função e estética quando faltam dentes, há desgaste ou problemas estruturais.</p>
-                    <div class="card-actions">
+                    <div class="card-actions justify-center">
                       <a class="btn btn-sm" href="https://wa.me/5585988207837?text=Ol%C3%A1!%20Quero%20saber%20sobre%20reabilita%C3%A7%C3%A3o%20oral.">Agendar consulta</a>
                     </div>
                   </div>
@@ -250,10 +250,10 @@
         </section>
 
         <section id="sobre" class="py-20">
-          <div class="mx-auto max-w-6xl px-4" data-reveal-group>
+          <div class="mx-auto max-w-6xl px-4 text-center lg:text-left" data-reveal-group>
             <p class="text-sm tracking-[0.2em] uppercase opacity-70">A doutora</p>
             <h2 class="font-display text-4xl font-semibold">Conheça a Dra. Virgínia Aragão</h2>
-            <p class="mt-3 max-w-3xl opacity-80">
+            <p class="mx-auto mt-3 max-w-3xl opacity-80 lg:mx-0">
               Cirurgiã-dentista, implantodontista e referência em odontologia estética e reabilitação oral. Um
               atendimento acolhedor, técnico e próximo — do primeiro contato ao sorriso pronto.
             </p>
@@ -263,7 +263,7 @@
                 <div class="card-body items-center text-center">
                   <div class="avatar">
                     <div class="w-28 rounded-full">
-                      <img src="/fotos/doutora.jpg" alt="Retrato da Dra. Virgínia Aragão" />
+                      <img class="object-top" src="/fotos/doutora.jpg" alt="Retrato da Dra. Virgínia Aragão" />
                     </div>
                   </div>
                   <h3 class="card-title">Dra. Virgínia Aragão Gondim</h3>
@@ -285,7 +285,7 @@
                 </div>
               </div>
 
-              <div class="stats stats-vertical bg-base-100 shadow-sm lg:col-span-2 lg:stats-horizontal">
+              <div class="stats stats-vertical bg-base-100 text-center shadow-sm lg:col-span-2 lg:stats-horizontal">
                 <div class="stat">
                   <div class="stat-title">Avaliação no Google</div>
                   <div class="stat-value">4,9</div>
@@ -307,15 +307,15 @@
         </section>
 
         <section class="bg-base-200 py-20">
-          <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-2" data-reveal-group>
-            <figure class="h-[28rem] overflow-hidden rounded-box">
+          <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 text-center lg:grid-cols-2 lg:text-left" data-reveal-group>
+            <figure class="mx-auto h-72 w-full max-w-lg overflow-hidden rounded-box lg:h-[28rem]">
               <img
-                class="h-full w-full object-cover object-[center_20%]"
+                class="h-full w-full object-cover object-top"
                 src="/fotos/implantes.jpg"
                 alt="Dra. Virgínia Aragão no consultório com modelo de implante"
               />
             </figure>
-            <div>
+            <div class="flex flex-col items-center lg:items-start">
               <p class="text-sm tracking-[0.2em] uppercase opacity-70">Quem somos nós</p>
               <h2 class="font-display text-4xl font-semibold">Cuidado odontológico com excelência e humanização</h2>
               <p class="mt-4 opacity-80">
@@ -338,9 +338,9 @@
         </section>
 
         <section class="py-20">
-          <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-2" data-reveal-group>
+          <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 text-center lg:grid-cols-2 lg:text-left" data-reveal-group>
             <div class="lg:order-2">
-              <figure class="h-[28rem] overflow-hidden rounded-box">
+              <figure class="mx-auto h-72 w-full max-w-lg overflow-hidden rounded-box lg:h-[28rem]">
                 <img
                   class="h-full w-full object-cover object-center"
                   src="/fotos/reel.jpg"
@@ -348,7 +348,7 @@
                 />
               </figure>
             </div>
-            <div>
+            <div class="flex flex-col items-center lg:items-start">
               <p class="text-sm tracking-[0.2em] uppercase opacity-70">Experiência</p>
               <h2 class="font-display text-4xl font-semibold">Atendimento personalizado</h2>
               <p class="mt-4 opacity-80">
@@ -370,12 +370,12 @@
         </section>
 
         <section id="depoimentos" class="bg-base-200 py-20">
-          <div class="mx-auto max-w-6xl px-4" data-reveal-group>
+          <div class="mx-auto max-w-6xl px-4 text-center" data-reveal-group>
             <p class="text-sm tracking-[0.2em] uppercase opacity-70">Quem já passou por aqui</p>
             <h2 class="font-display text-4xl font-semibold">O que os pacientes dizem</h2>
             <div class="mt-10 grid gap-6 md:grid-cols-3" data-reveal-group>
               <article class="card bg-base-100 shadow-sm">
-                <div class="card-body">
+                <div class="card-body items-center text-center">
                   <div class="rating rating-sm">
                     <div class="mask mask-star bg-secondary" aria-label="1 estrela"></div>
                     <div class="mask mask-star bg-secondary" aria-label="2 estrela"></div>
@@ -391,7 +391,7 @@
                 </div>
               </article>
               <article class="card bg-base-100 shadow-sm">
-                <div class="card-body">
+                <div class="card-body items-center text-center">
                   <div class="rating rating-sm">
                     <div class="mask mask-star bg-secondary" aria-label="1 estrela"></div>
                     <div class="mask mask-star bg-secondary" aria-label="2 estrela"></div>
@@ -407,7 +407,7 @@
                 </div>
               </article>
               <article class="card bg-base-100 shadow-sm">
-                <div class="card-body">
+                <div class="card-body items-center text-center">
                   <div class="rating rating-sm">
                     <div class="mask mask-star bg-secondary" aria-label="1 estrela"></div>
                     <div class="mask mask-star bg-secondary" aria-label="2 estrela"></div>
@@ -426,7 +426,7 @@
         </section>
 
         <section class="py-20">
-          <div class="mx-auto max-w-3xl px-4" data-reveal-group>
+          <div class="mx-auto max-w-3xl px-4 text-center" data-reveal-group>
             <p class="text-sm tracking-[0.2em] uppercase opacity-70">Conteúdo</p>
             <h2 class="font-display text-4xl font-semibold">Dica da Dra. Virgínia Aragão</h2>
             <article class="card bg-base-200 mt-8">
@@ -440,7 +440,7 @@
                   A decisão certa nasce de um exame atento — e de um plano que respeita saúde óssea, gengiva e o que você
                   espera ver no espelho.
                 </p>
-                <div class="card-actions">
+                <div class="card-actions justify-center">
                   <a
                     class="btn"
                     href="https://wa.me/5585988207837?text=Ol%C3%A1!%20Quero%20uma%20avalia%C3%A7%C3%A3o%20para%20implante."
@@ -455,7 +455,7 @@
 
         <section id="contato" class="bg-base-200 py-20">
           <div class="mx-auto grid max-w-6xl gap-10 px-4 lg:grid-cols-2" data-reveal-group>
-            <div>
+            <div class="text-center lg:text-left">
               <p class="text-sm tracking-[0.2em] uppercase opacity-70">Nosso endereço</p>
               <h2 class="font-display text-4xl font-semibold">Rua Francisco Lorda, 236 — Vila União</h2>
               <p class="mt-3 opacity-80">Fortaleza - CE, 60416-250</p>
@@ -487,8 +487,8 @@
             </div>
 
             <form id="agendar-form" class="card bg-base-100 shadow-sm">
-              <div class="card-body">
-                <h3 class="card-title font-display text-3xl">Agendar consulta</h3>
+              <div class="card-body text-center lg:text-left">
+                <h3 class="card-title font-display justify-center text-3xl lg:justify-start">Agendar consulta</h3>
                 <p class="opacity-80">Preencha e enviaremos sua mensagem direto no WhatsApp da clínica.</p>
                 <fieldset class="fieldset">
                   <legend class="fieldset-legend">Nome</legend>
@@ -513,7 +513,7 @@
                   <legend class="fieldset-legend">Mensagem</legend>
                   <textarea class="textarea w-full" name="mensagem" rows="3" placeholder="Conte rapidamente o que você precisa"></textarea>
                 </fieldset>
-                <div class="card-actions mt-2">
+                <div class="card-actions mt-2 justify-center">
                   <button class="btn btn-block" type="submit">Enviar no WhatsApp</button>
                 </div>
               </div>
@@ -521,7 +521,7 @@
           </div>
         </section>
 
-        <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10" data-reveal-group>
+        <footer class="footer footer-center sm:footer-horizontal bg-neutral text-neutral-content p-10" data-reveal-group>
           <aside>
             <p class="font-display text-2xl font-semibold">Dra. Virgínia Aragão</p>
             <p>Implantes · Ortodontia · Alinhadores · Estética</p>

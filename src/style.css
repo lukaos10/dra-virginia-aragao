@@ -66,21 +66,11 @@ body {
 html.reveal-ready [data-reveal-group] > *:not([data-reveal-group]),
 .reveal {
   opacity: 0;
-  transform: translate3d(0, 2.5rem, 0);
+  transform: translate3d(0, 1.75rem, 0);
   transition:
     opacity 1.05s cubic-bezier(0.22, 1, 0.36, 1),
     transform 1.05s cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--reveal-delay, 0ms);
-}
-
-.reveal-left,
-html.reveal-ready [data-reveal-group].grid > *:first-child {
-  transform: translate3d(-2.25rem, 0, 0);
-}
-
-.reveal-right,
-html.reveal-ready [data-reveal-group].grid > *:last-child {
-  transform: translate3d(2.25rem, 0, 0);
 }
 
 html.reveal-ready [data-reveal-group="fade"] > *:not([data-reveal-group]),
